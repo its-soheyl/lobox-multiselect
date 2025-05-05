@@ -12,11 +12,12 @@ $input-error: #f7374f;
 }
 
 .input {
-  border: 1px solid #ccc;
+  border: 1px solid #ddd;
   border-radius: 8px;
   padding: 0 0.8rem;
   font-size: 1rem;
   outline: none;
+  background: #fff;
   transition: border-color 0.2s ease;
 
   &:focus {

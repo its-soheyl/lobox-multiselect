@@ -1,4 +1,4 @@
-import { FC } from "react"
+import { FC, memo } from "react"
 import styles from './Input.module.scss'
 
 interface IInputProps extends React.InputHTMLAttributes<HTMLInputElement> {
@@ -18,7 +18,7 @@ const COLORS = {
   error: styles.error
 }
 
-const Input: FC<IInputProps> = ({ inputSize = 'sm', inputColor = 'primary', icon, ...props }) => {
+const Input: FC<IInputProps> = memo(({ inputSize = 'sm', inputColor = 'primary', icon, ...props }) => {
 
   return (
     <div className={styles.inputContainer}>
@@ -26,6 +26,6 @@ const Input: FC<IInputProps> = ({ inputSize = 'sm', inputColor = 'primary', icon
       {icon && <span className={styles.inputIcon}>{icon}</span>}
     </div>
   )
-}
+})
 
 export default Input

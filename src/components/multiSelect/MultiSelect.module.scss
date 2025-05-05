@@ -1,0 +1,17 @@
+.container {
+  position: relative;
+  width: 100%;
+}
+
+.menuItemContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.checkIcon {
+  color: #0066ff;
+  display: flex;
+  align-items: center;
+}
