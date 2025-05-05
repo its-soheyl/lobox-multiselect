@@ -1,7 +1,11 @@
-import './App.css'
-import MultiSelect from './components/multiSelect/MultiSelect'
+import { useState } from 'react';
+import { MultiSelect } from './components';
+
+import './App.css';
 
 function App() {
+
+  const [selectedValues, setSelectedValues] = useState<(string | number)[]>([]);
 
   const options = [
     {
@@ -25,7 +29,8 @@ function App() {
   ]
 
   return (
-    <MultiSelect placeholder='science' options={options} />
+    <MultiSelect placeholder='science' options={options} value={selectedValues}
+      onChange={(value) => setSelectedValues(value)} />
   )
 }
 
