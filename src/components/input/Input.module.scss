@@ -1,9 +1,9 @@
-$input-sm-height: 2rem;
-$input-md-height: 2.5rem;
-$input-lg-height: 3rem;
-$input-min-width: 200px;
+$input-sm-height: 2.5rem;
+$input-md-height: 3rem;
+$input-lg-height: 3.5rem;
+$input-min-width: 250px;
 
-$input-primary: #0066ff;
+$input-primary: #407bff;
 $input-error: #f7374f;
 
 .inputContainer {
@@ -12,7 +12,7 @@ $input-error: #f7374f;
 }
 
 .input {
-  border: 1px solid #ddd;
+  border: 1px solid #e6e9ee;
   border-radius: 8px;
   padding: 0 0.8rem;
   font-size: 1rem;
@@ -22,7 +22,7 @@ $input-error: #f7374f;
 
   &:focus {
     border: 2px solid;
-    box-shadow: 0 0 0 3px rgba(0, 102, 255, 0.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
 
     &.primary {
       border-color: $input-primary;
@@ -52,7 +52,7 @@ $input-error: #f7374f;
 }
 
 .inputIcon {
-  color: #666;
+  color: #1e3662;
   position: absolute;
   cursor: pointer;
   height: 25px;
@@ -60,7 +60,4 @@ $input-error: #f7374f;
   right: 5px;
   top: 70%;
   transform: translateY(-65%);
-  &:hover {
-    color: #333;
-  }
 }
