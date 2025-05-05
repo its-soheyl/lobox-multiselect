@@ -4,6 +4,7 @@ import styles from './Input.module.scss'
 interface IInputProps extends React.InputHTMLAttributes<HTMLInputElement> {
   inputSize?: 'sm' | 'md' | 'lg'
   inputColor?: 'primary' | 'error'
+  icon?: React.ReactNode
 }
 
 const SIZES = {
@@ -17,10 +18,13 @@ const COLORS = {
   error: styles.error
 }
 
-const Input: FC<IInputProps> = ({ inputSize = 'sm', inputColor = 'primary', ...props }) => {
+const Input: FC<IInputProps> = ({ inputSize = 'sm', inputColor = 'primary', icon, ...props }) => {
 
   return (
-    <input className={`${styles.input} ${SIZES[inputSize]} ${COLORS[inputColor]}`}  {...props} />
+    <div className={styles.inputContainer}>
+      <input className={`${styles.input} ${SIZES[inputSize]} ${COLORS[inputColor]}`}  {...props} />
+      {icon && <span className={styles.inputIcon}>{icon}</span>}
+    </div>
   )
 }
 

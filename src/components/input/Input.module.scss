@@ -6,10 +6,15 @@ $input-min-width: 200px;
 $input-primary: #0066ff;
 $input-error: #f7374f;
 
+.inputContainer {
+  position: relative;
+  width: fit-content;
+}
+
 .input {
   border: 1px solid #ccc;
   border-radius: 8px;
-  padding: 0 0.5rem;
+  padding: 0 0.8rem;
   font-size: 1rem;
   outline: none;
   transition: border-color 0.2s ease;
@@ -42,5 +47,19 @@ $input-error: #f7374f;
     height: $input-lg-height;
     min-width: $input-min-width;
     font-size: 1.125rem;
+  }
+}
+
+.inputIcon {
+  color: #666;
+  position: absolute;
+  cursor: pointer;
+  height: 25px;
+  width: 25px;
+  right: 5px;
+  top: 70%;
+  transform: translateY(-65%);
+  &:hover {
+    color: #333;
   }
 }
