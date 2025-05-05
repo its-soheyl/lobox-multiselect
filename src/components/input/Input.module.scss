@@ -1,0 +1,46 @@
+$input-sm-height: 2rem;
+$input-md-height: 2.5rem;
+$input-lg-height: 3rem;
+$input-min-width: 200px;
+
+$input-primary: #0066ff;
+$input-error: #f7374f;
+
+.input {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 0 0.5rem;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s ease;
+
+  &:focus {
+    border: 2px solid;
+    box-shadow: 0 0 0 3px rgba(0, 102, 255, 0.1);
+
+    &.primary {
+      border-color: $input-primary;
+    }
+
+    &.error {
+      border-color: $input-error;
+    }
+  }
+
+  &.sizeSm {
+    height: $input-sm-height;
+    min-width: $input-min-width;
+    font-size: 0.875rem;
+  }
+
+  &.sizeMd {
+    height: $input-md-height;
+    min-width: $input-min-width;
+  }
+
+  &.sizeLg {
+    height: $input-lg-height;
+    min-width: $input-min-width;
+    font-size: 1.125rem;
+  }
+}
